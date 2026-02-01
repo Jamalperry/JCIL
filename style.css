@@ -1,0 +1,308 @@
+/* ===========================
+   Base Typography & Body
+   =========================== */
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  background-color: #fafafa;
+  color: #222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2c2c2c;
+}
+
+p, .lead {
+  font-size: 1.05rem;
+  color: #444;
+}
+
+/* ===========================
+   Light & Dark Mode
+   =========================== */
+body.light-mode {
+  background-color: #fdfdfd;
+  color: #222;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5 {
+  color: #fdfdfd;
+}
+
+body.dark-mode p, 
+body.dark-mode .lead {
+  color: #ccc;
+}
+
+body.dark-mode .card {
+  background: linear-gradient(to bottom right, #1e1e1e, #2a2a2a);
+  color: #eee;
+}
+
+body.dark-mode .navbar,
+body.dark-mode footer {
+  background: linear-gradient(to right, #1a1a1a, #333);
+}
+
+body.dark-mode .nav-link:hover {
+  color: #ffd700 !important;
+}
+
+/* ===========================
+   Navbar
+   =========================== */
+.navbar {
+  font-size: 1rem;
+  background: linear-gradient(135deg, #fffbe6, #ffe4e1, #e0f7fa);
+  color: #000 !important;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+.navbar-brand {
+  font-family: 'Lato', 'Barlow', 'Futura', sans-serif;
+  font-size: 1.3rem;
+  color: #000 !important;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+.nav-link {
+  color: #000 !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #222 !important;
+}
+
+/* ===========================
+   Hero Section
+   =========================== */
+.hero, header {
+  background: linear-gradient(135deg, #fffbe6, #ffe4e1, #e0f7fa);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-top: 1rem;
+  background: linear-gradient(to right, #d35400, #2980b9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.hero img {
+  max-width: 220px;
+  animation: fadeIn 2s ease;
+}
+
+/* ===========================
+   Blog Cards
+   =========================== */
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  color: #2c3e50;
+}
+
+.card-text {
+  color: #555;
+}
+
+/* ===========================
+   Badges
+   =========================== */
+.badge {
+  margin-right: 0.3rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+}
+
+.badge.bg-primary { background-color: #2980b9 !important; }
+.badge.bg-success { background-color: #27ae60 !important; }
+.badge.bg-warning { background-color: #f39c12 !important; }
+.badge.bg-info    { background-color: #16a085 !important; }
+
+/* ===========================
+   Footer
+   =========================== */
+footer {
+  background: linear-gradient(135deg, #fffbe6, #ffe4e1, #e0f7fa);
+  color: #000;
+}
+
+footer p {
+  margin: 0;
+}
+
+.social-icons a {
+  color: #000;
+  margin: 0 0.5rem;
+  font-size: 1.6rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffd700;
+  transform: scale(1.2);
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+.btn {
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ===========================
+   Forms
+   =========================== */
+form .form-control {
+  border-radius: 8px;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+}
+
+form .form-control:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 8px rgba(41,128,185,0.3);
+}
+
+form .btn {
+  border-radius: 8px;
+  background: linear-gradient(135deg, #fffbe6, #ffe4e1, #e0f7fa);
+  border: none;
+  color: #000;
+}
+
+form .btn:hover {
+  background: linear-gradient(to right, #ffd700, #ff6f61);
+  
+}
+
+/* ===========================
+   Carousel (Hero)
+   =========================== */
+#heroCarousel {
+  height: 420px;
+  position: relative;
+  overflow: hidden;
+}
+
+#heroCarousel .carousel-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+
+#heroCarousel .carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  z-index: -1;
+  background-size: 200% 200%;
+  animation: parallaxShift 12s ease-in-out infinite;
+}
+
+#heroCarousel h1 {
+  font-size: 2.5rem;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+#heroCarousel p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.images {
+  height: auto;
+  width: 100%;
+  margin: 5%;
+}
+
+/* Fade Transition */
+#heroCarousel.carousel.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+#heroCarousel.carousel.carousel-fade .carousel-item.active,
+#heroCarousel.carousel.carousel-fade .carousel-item-next.carousel-item-start,
+#heroCarousel.carousel.carousel-fade .carousel-item-prev.carousel-item-end {
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* Zoom-in Animation */
+#heroCarousel .carousel-item h1,
+#heroCarousel .carousel-item p,
+#heroCarousel .carousel-item img {
+  transform: scale(0.95);
+  transition: transform 1s ease;
+}
+
+#heroCarousel .carousel-item.active h1,
+#heroCarousel .carousel-item.active p,
+#heroCarousel .carousel-item.active img {
+  transform: scale(1);
+}
+
+/* Parallax Keyframes */
+@keyframes parallaxShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===========================
+   Animations
+   =========================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
